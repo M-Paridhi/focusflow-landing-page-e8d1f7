@@ -1,0 +1,262 @@
+:root {
+    --primary: #3B82F6;
+    --secondary: #1E40AF;
+    --background: #F8FAFC;
+    --text: #1F2937;
+    --accent: #10B981;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --border-radius: 0.5rem;
+    /* New variables for consistency */
+    --white: #fff;
+    --light-background: #f0f4f8; /* Used in PricingTable */
+    --light-text: #4b5563; /* Used in FeatureGrid p, PricingTable .plan ul li */
+    --accent-dark: #0c9c6e; /* Darker shade for accent hover */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.Navbar h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: var(--primary);
+}
+
+.Navbar nav a {
+    margin-left: 1.5rem;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.Navbar nav a:hover {
+    color: var(--primary);
+}
+
+.HeroSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    padding: 6rem 2rem;
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
+}
+
+.HeroSection h2 {
+    margin-bottom: 1rem;
+    max-width: 800px;
+    font-size: 3.5rem;
+}
+
+.HeroSection p {
+    margin-bottom: 2rem;
+    max-width: 700px;
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+.HeroSection button {
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--accent);
+    color: var(--white);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.HeroSection button:hover {
+    background-color: var(--accent-dark);
+}
+
+.FeatureGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+}
+
+.FeatureGrid div {
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.FeatureGrid h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.FeatureGrid p {
+    color: var(--light-text);
+}
+
+.PricingTable {
+    padding: 4rem 2rem;
+    background-color: var(--light-background);
+    text-align: center;
+}
+
+.PricingTable h2 {
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: var(--secondary);
+}
+
+.PricingTable .plans {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.PricingTable .plan {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    text-align: left;
+}
+
+.PricingTable .plan h3 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: var(--primary);
+}
+
+.PricingTable .plan .price {
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text);
+}
+
+.PricingTable .plan ul {
+    flex-grow: 1;
+    margin-bottom: 2rem;
+    padding: 0;
+    list-style: none;
+}
+
+.PricingTable .plan ul li {
+    margin-bottom: 0.8rem;
+    color: var(--light-text);
+}
+
+.PricingTable .plan button {
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--primary);
+    color: var(--white);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.PricingTable .plan button:hover {
+    background-color: var(--secondary);
+}
+
+.Footer {
+    padding: 3rem 2rem;
+    background-color: var(--secondary);
+    color: var(--white);
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.Footer p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .Navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .Navbar h1 {
+        margin-bottom: 1rem;
+    }
+
+    .Navbar nav a {
+        margin: 0 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .HeroSection {
+        min-height: auto;
+        padding: 4rem 1rem;
+    }
+
+    .HeroSection h2 {
+        font-size: 2.5rem;
+    }
+
+    .HeroSection p {
+        font-size: 1.1rem;
+    }
+
+    .HeroSection button {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+
+    .FeatureGrid {
+        padding: 3rem 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    .PricingTable {
+        padding: 3rem 1rem;
+    }
+
+    .PricingTable h2 {
+        font-size: 2rem;
+    }
+
+    .PricingTable .plans {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .PricingTable .plan {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .Footer {
+        padding: 2rem 1rem;
+    }
+}
